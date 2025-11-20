@@ -86,7 +86,7 @@ Simulate a corporate environment where a server manages AD user accounts and a W
 3. **Windows 10 system properties** showing domain join  
 4. **Logon screen** using a domain user account  
 
-*(Place screenshots in `/images` folder and reference them here)*
+*(images)*
 
 ---
 
@@ -104,6 +104,7 @@ Simulate a corporate environment where a server manages AD user accounts and a W
 - Configure **file shares** with security group permissions  
 - Simulate common **help desk tasks** (password reset, unlock accounts)  
 - Collect and analyze **Windows Event Logs**
+
 
 
 
