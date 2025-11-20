@@ -9,14 +9,20 @@ This lab simulates a small company environment using **Active Directory Domain S
 - Joining a **Windows 10** machine to a domain
 - Testing domain logons for multiple users
 
+![Windows Server](https://img.shields.io/badge/OS-Windows%20Server-blue)
+![Windows 10](https://img.shields.io/badge/OS-Windows%2010-brightgreen)
+![VirtualBox](https://img.shields.io/badge/Hypervisor-VirtualBox-orange)
+![PowerShell](https://img.shields.io/badge/Automation-PowerShell-blueviolet)
+![Active Directory](https://img.shields.io/badge/Technology-Active%20Directory-blue)
+
 ---
 
 ## 🏗️ Lab Overview
 
 | Component        | Details |
 |-----------------|---------|
-| Hypervisor       | Oracle VirtualBox |
-| Server OS        | Windows Server 2019 (Domain Controller) |
+| Hypervisor       | Oracle VirtualBox | 
+| Server OS        | Windows Server 2019 (Domain Controller) | 
 | Client OS        | Windows 10 |
 | Directory Service| Active Directory Domain Services (AD DS) |
 | Automation       | PowerShell script to bulk-create 1,000 users |
@@ -74,13 +80,6 @@ Simulate a corporate environment where a server manages AD user accounts and a W
 
 ---
 
-## ⚡ Troubleshooting Notes
-- **Cannot join Windows 10 to domain:** Check DNS points to DC.  
-- **Users cannot log in:** Verify accounts enabled & passwords meet requirements.  
-- **Client cannot reach DC:** Check VirtualBox network adapters (internal/host-only network).
-
----
-
 ## 🖼️ Screenshots
 1. **Active Directory Users & Computers** showing bulk-created users  
 2. **PowerShell script output** after creating 1,000 users  
@@ -105,6 +104,7 @@ Simulate a corporate environment where a server manages AD user accounts and a W
 - Configure **file shares** with security group permissions  
 - Simulate common **help desk tasks** (password reset, unlock accounts)  
 - Collect and analyze **Windows Event Logs**
+
 
 
 
