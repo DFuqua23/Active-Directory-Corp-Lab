@@ -90,20 +90,12 @@ Simulate a corporate environment where a server manages AD user accounts and a W
 
 ---
 
-## 🚀 Quickstart
-1. Install Oracle VirtualBox
-2. Create Windows Server 2019 VM → Install AD DS + DNS → Promote to DC
-3. Run PowerShell script to create users
-4. Create Windows 10 VM → Point DNS to DC → Join domain
-5. Log in with a domain user
-
----
-
 ## 🌱 Future Enhancements
 - Add **GPOs** (password policies, desktop restrictions)  
 - Configure **file shares** with security group permissions  
 - Simulate common **help desk tasks** (password reset, unlock accounts)  
 - Collect and analyze **Windows Event Logs**
+
 
 
 
