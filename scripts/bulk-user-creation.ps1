@@ -1,6 +1,7 @@
 # Bulk Active Directory User Creation with PowerShell
 
-This script was used to automatically create approximately **1,000 user accounts** in a specific Organizational Unit (OU). This simulates onboarding a large number of employees in a corporate environment and demonstrates basic automation skills with **PowerShell** and **Active Directory**.
+This script was used to automatically create approximately **1,000 user accounts** in a specific Organizational Unit (OU). 
+This simulates onboarding a large number of employees in a corporate environment and demonstrates basic automation. 
 
 ---
 
