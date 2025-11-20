@@ -19,7 +19,7 @@ This lab simulates a small company environment using **Active Directory Domain S
 | Server OS        | Windows Server 2019 (Domain Controller) |
 | Client OS        | Windows 10 |
 | Directory Service| Active Directory Domain Services (AD DS) |
-| Automation       | PowerShell script to bulk-create ~1,000 users |
+| Automation       | PowerShell script to bulk-create 1,000 users |
 
 **Objective:**  
 Simulate a corporate environment where a server manages AD user accounts and a Windows 10 client allows logins from any of the 1,000 users.
@@ -33,7 +33,7 @@ Simulate a corporate environment where a server manages AD user accounts and a W
 1. **VM 1 – DC01 (Windows Server 2019)**
    - Promoted to a **domain controller**
    - Active Directory Domain Services (AD DS) + DNS installed
-   - PowerShell script creates ~1,000 AD users  
+   - PowerShell script creates 1,000 AD users  
 
 2. **VM 2 – CLIENT01 (Windows 10)**
    - Configured DNS to point to the domain controller
@@ -83,7 +83,7 @@ Simulate a corporate environment where a server manages AD user accounts and a W
 
 ## 🖼️ Screenshots
 1. **Active Directory Users & Computers** showing bulk-created users  
-2. **PowerShell script output** after creating ~1,000 users  
+2. **PowerShell script output** after creating 1,000 users  
 3. **Windows 10 system properties** showing domain join  
 4. **Logon screen** using a domain user account  
 
@@ -105,6 +105,7 @@ Simulate a corporate environment where a server manages AD user accounts and a W
 - Configure **file shares** with security group permissions  
 - Simulate common **help desk tasks** (password reset, unlock accounts)  
 - Collect and analyze **Windows Event Logs**
+
 
 
 
