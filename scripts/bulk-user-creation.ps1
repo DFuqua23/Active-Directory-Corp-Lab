@@ -1,94 +1,55 @@
-<#
-.SYNOPSIS
-  Bulk create users in Active Directory and place them into Employees OU.
+# Bulk Active Directory User Creation with PowerShell
 
-.DESCRIPTION
-  Example script for controlled lab usage. Generates a set number of users with
-  realistic first/last name combinations and sets a default password that must be changed.
-  For production use, integrate with a secure password generator and do not hardcode credentials.
+This script was used in my Active Directory lab to automatically create approximately **1,000 user accounts** in a specific Organizational Unit (OU). This simulates onboarding a large number of employees in a corporate environment and demonstrates basic automation skills with **PowerShell** and **Active Directory**.
 
-.NOTES
-  - Requires the ActiveDirectory PowerShell module
-  - Run as an account with privileges to create users in the target OU
-#>
+---
 
-Import-Module ActiveDirectory -ErrorAction Stop
+## 📜 Script: Create-ADUsers.ps1
 
-# CONFIGURE THESE BEFORE RUNNING
-$DomainDN        = "DC=corp,DC=local"               # Change to your domain distinguishedName
-$TargetOU        = "OU=Employees,$DomainDN"         # OU where users will be created
-$UserPassword    = "P@ssw0rd123!"                   # Lab-only password (change before use)
-$NumberOfUsers   = 1000                              # How many users to create
-$StartId         = 1001                              # Starting numeric suffix for usernames
-$DisplayNameSeed = "Employee"                        # Optional prefix for display name
+```powershell
+# ----- Edit these Variables for your own Use Case ----- #
+$PASSWORD_FOR_USERS   = "Password1"
+$NUMBER_OF_ACCOUNTS_TO_CREATE = 1000
+# ------------------------------------------------------ #
 
-# A small sample list of first and last names used to create variety
-$FirstNames = @(
-    "Alex","Jordan","Taylor","Morgan","Casey","Avery","Riley","Quinn","Jamie","Alexis",
-    "Cameron","Drew","Parker","Sydney","Skyler","Reese","Rowan","Kai","Logan","Elliot"
-)
+Function generate-random-name() {
+    $consonants = @('b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','z')
+    $vowels = @('a','e','i','o','u','y')
+    $nameLength = Get-Random -Minimum 3 -Maximum 7
+    $count = 0
+    $name = ""
 
-$LastNames = @(
-    "Smith","Johnson","Williams","Brown","Jones","Garcia","Miller","Davis","Rodriguez","Martinez",
-    "Hernandez","Lopez","Gonzalez","Wilson","Anderson","Thomas","Taylor","Moore","Jackson","Martin"
-)
-
-# Convert plain password to secure string once
-$SecurePassword = ConvertTo-SecureString $UserPassword -AsPlainText -Force
-
-# Utility to get a random name pair
-function Get-RandomNamePair {
-    $fn = $FirstNames | Get-Random
-    $ln = $LastNames  | Get-Random
-    return @{First=$fn; Last=$ln}
-}
-
-# Confirm action
-Write-Host "About to create $NumberOfUsers users in $TargetOU" -ForegroundColor Cyan
-$confirmation = Read-Host "Type YES to continue"
-if ($confirmation -ne "YES") {
-    Write-Warning "Aborted by user."
-    exit
-}
-
-# Create users loop
-for ($i = 0; $i -lt $NumberOfUsers; $i++) {
-    $id = $StartId + $i
-    $namePair = Get-RandomNamePair
-    $first = $namePair.First
-    $last  = $namePair.Last
-
-    # Create unique username (first initial + lastname + id)
-    $sAM = ("{0}{1}{2}" -f $first.Substring(0,1).ToLower(), $last.ToLower(), $id)
-
-    # Prevent collisions by checking existence
-    if (Get-ADUser -Filter { SamAccountName -eq $sAM } -ErrorAction SilentlyContinue) {
-        Write-Host "User $sAM already exists. Skipping." -ForegroundColor Yellow
-        continue
+    while ($count -lt $nameLength) {
+        if ($($count % 2) -eq 0) {
+            $name += $consonants[$(Get-Random -Minimum 0 -Maximum $($consonants.Count - 1))]
+        }
+        else {
+            $name += $vowels[$(Get-Random -Minimum 0 -Maximum $($vowels.Count - 1))]
+        }
+        $count++
     }
 
-    $displayName = "$first $last ($DisplayNameSeed $id)"
-    $userPrincipalName = "$sAM@corp.local"
+    return $name
 
-    try {
-        New-ADUser `
-            -Name $displayName `
-            -GivenName $first `
-            -Surname $last `
-            -SamAccountName $sAM `
-            -UserPrincipalName $userPrincipalName `
-            -DisplayName $displayName `
-            -AccountPassword $SecurePassword `
-            -Enabled $true `
-            -Path $TargetOU `
-            -ChangePasswordAtLogon $false `
-            -PasswordNeverExpires $true
-
-        Write-Host "Created user $sAM" -ForegroundColor Green
-    }
-    catch {
-        Write-Host "Failed creating $sAM : $_" -ForegroundColor Red
-    }
 }
 
-Write-Host "Done creating users." -ForegroundColor Cyan
+$count = 1
+while ($count -lt $NUMBER_OF_ACCOUNTS_TO_CREATE) {
+    $fisrtName = generate-random-name
+    $lastName = generate-random-name
+    $username = $fisrtName + '.' + $lastName
+    $password = ConvertTo-SecureString $PASSWORD_FOR_USERS -AsPlainText -Force
+
+    Write-Host "Creating user: $($username)" -BackgroundColor Black -ForegroundColor Cyan
+    
+    New-AdUser -AccountPassword $password `
+               -GivenName $firstName `
+               -Surname $lastName `
+               -DisplayName $username `
+               -Name $username `
+               -EmployeeID $username `
+               -PasswordNeverExpires $true `
+               -Path "ou=_EMPLOYEES,$(([ADSI]`"").distinguishedName)" `
+               -Enabled $true
+    $count++
+}
