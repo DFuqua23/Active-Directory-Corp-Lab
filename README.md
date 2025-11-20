@@ -1,6 +1,8 @@
-# Active Directory Home Lab – Windows Server 2019 + Windows 10
+# 🖥️ Active Directory Home Lab – Windows Server 2019 + Windows 10
 
-This lab simulates a small company environment using **Active Directory Domain Services (AD DS)** on **Windows Server 2019** with a **Windows 10** client joined to the domain. The goal of the project was to gain hands-on experience with:
+This lab simulates a small company environment using **Active Directory Domain Services (AD DS)** on **Windows Server 2019** with a **Windows 10** client joined to the domain.  
+
+**Goal:** Gain hands-on experience with:
 
 - Installing and configuring a **domain controller**
 - Managing **user accounts** in Active Directory
@@ -9,86 +11,101 @@ This lab simulates a small company environment using **Active Directory Domain S
 
 ---
 
-## Lab Overview
+## 🏗️ Lab Overview
 
-**Hypervisor:** Oracle VirtualBox  
-**Server OS:** Windows Server 2019 (Domain Controller)  
-**Client OS:** Windows 10  
-**Directory Service:** Active Directory Domain Services (AD DS)  
-**Automation:** PowerShell script to bulk-create ~1,000 users
+| Component        | Details |
+|-----------------|---------|
+| Hypervisor       | Oracle VirtualBox |
+| Server OS        | Windows Server 2019 (Domain Controller) |
+| Client OS        | Windows 10 |
+| Directory Service| Active Directory Domain Services (AD DS) |
+| Automation       | PowerShell script to bulk-create ~1,000 users |
 
-### Objective
-
-Simulate a basic corporate environment where:
-
-- A **Windows Server 2019** VM acts as the **domain controller**
-- A **Windows 10** VM is joined to the domain
-- Any of the ~1,000 **Active Directory user accounts** can sign in to the Windows 10 machine
-
-This mirrors a scenario where a company has a central server managing employee accounts and workstations joined to the domain.
+**Objective:**  
+Simulate a corporate environment where a server manages AD user accounts and a Windows 10 client allows logins from any of the 1,000 users.
 
 ---
 
-## Lab Architecture
+## 🖥️ Lab Architecture
 
-- **VirtualBox Host**
-  - **VM 1 – DC01 (Windows Server 2019)**
-    - Promoted to a **domain controller**
-    - Active Directory Domain Services (AD DS) installed
-    - DNS role installed (internal DNS for the domain)
-    - PowerShell script used to create ~1,000 AD users
+**VirtualBox Host:**
 
-  - **VM 2 – CLIENT01 (Windows 10)**
-    - Configured to use the domain controller as its DNS server
-    - Joined to the domain
-    - Tested logons using randomly selected AD user accounts
+1. **VM 1 – DC01 (Windows Server 2019)**
+   - Promoted to a **domain controller**
+   - Active Directory Domain Services (AD DS) + DNS installed
+   - PowerShell script creates ~1,000 AD users  
 
----
-
-## Steps Performed
-
-### 1. Set Up the Domain Controller (Windows Server 2019)
-
-1. Created a new VM in **Oracle VirtualBox** and installed **Windows Server 2019** from ISO.
-2. Configured a static IP address on the server.
-3. Renamed the server (e.g., `DC01`) and rebooted.
-4. Installed **Active Directory Domain Services** and **DNS Server** roles.
-5. Promoted the server to a **domain controller**, creating a new forest (e.g., `example.local`).
-
-### 2. Bulk Create Active Directory Users with PowerShell
-
-1. Wrote/used a PowerShell script to automatically create ~1,000 user accounts.
-2. User accounts were created in a specific **Organizational Unit (OU)** for easier management.
-3. Verified user creation in **Active Directory Users and Computers (ADUC)**.
-
-> Example script snippet is included in this repo under `/scripts/Create-ADUsers.ps1`.
-
-### 3. Set Up the Windows 10 Client
-
-1. Created a new VM in **VirtualBox** and installed **Windows 10** from ISO.
-2. Pointed the Windows 10 VM’s **DNS server** to the IP address of the domain controller.
-3. Joined the Windows 10 machine to the domain (`example.local`).
-4. Rebooted and signed in using several of the newly created domain user accounts to confirm domain logon was working.
+2. **VM 2 – CLIENT01 (Windows 10)**
+   - Configured DNS to point to the domain controller
+   - Joined to the domain
+   - Verified logins for multiple domain users
 
 ---
 
-## Skills Demonstrated
+## ⚙️ Steps Performed
 
-- Installing and configuring **Active Directory Domain Services**
-- Promoting a server to a **domain controller**
-- Managing **DNS** in a domain environment
-- Using **PowerShell** to **automate user creation** in Active Directory
-- Joining a **Windows 10 workstation** to a domain
-- Troubleshooting **domain join** and **logon issues** (DNS, credentials, connectivity)
+### 1️⃣ Set Up the Domain Controller (Windows Server 2019)
+1. Created a new VM in **VirtualBox** and installed **Windows Server 2019**.
+2. Configured a **static IP**.
+3. Renamed server to `DC01` and rebooted.
+4. Installed **AD DS** + **DNS Server** roles.
+5. Promoted the server to **domain controller**, creating a new forest (e.g., `example.local`).
+
+### 2️⃣ Bulk Create Active Directory Users
+- Ran a PowerShell script to create ~1,000 users.
+- Users created in a dedicated **Organizational Unit (OU)**.
+- Verified users in **Active Directory Users and Computers (ADUC)**.
+> Script available in `/scripts/Create-ADUsers.ps1`
+
+### 3️⃣ Set Up the Windows 10 Client
+1. Created a Windows 10 VM.
+2. Set **DNS server** to the domain controller’s IP.
+3. Joined VM to the domain `example.local`.
+4. Logged in using several AD accounts to confirm functionality.
 
 ---
 
-## Next Steps / Possible Enhancements
+## 🛠️ Skills Demonstrated
+- Active Directory setup & configuration
+- Domain controller promotion & DNS management
+- PowerShell automation for user creation
+- Windows 10 domain joins
+- Troubleshooting login & connectivity issues
 
-- Implement **Group Policy Objects (GPOs)** for password policies, desktop restrictions, or mapped drives.
-- Add additional client VMs to simulate multiple endpoints.
-- Configure **file shares** and permissions based on security groups.
-- Practice common **help desk tasks**, such as password resets and account lockout troubleshooting.
+---
+
+## ⚡ Troubleshooting Notes
+- **Cannot join Windows 10 to domain:** Check DNS points to DC.  
+- **Users cannot log in:** Verify accounts enabled & passwords meet requirements.  
+- **Client cannot reach DC:** Check VirtualBox network adapters (internal/host-only network).
+
+---
+
+## 🖼️ Screenshots
+1. **Active Directory Users & Computers** showing bulk-created users  
+2. **PowerShell script output** after creating ~1,000 users  
+3. **Windows 10 system properties** showing domain join  
+4. **Logon screen** using a domain user account  
+
+*(Place screenshots in `/images` folder and reference them here)*
+
+---
+
+## 🚀 Quickstart
+1. Install Oracle VirtualBox
+2. Create Windows Server 2019 VM → Install AD DS + DNS → Promote to DC
+3. Run PowerShell script to create users
+4. Create Windows 10 VM → Point DNS to DC → Join domain
+5. Log in with a domain user
+
+---
+
+## 🌱 Future Enhancements
+- Add **GPOs** (password policies, desktop restrictions)  
+- Configure **file shares** with security group permissions  
+- Simulate common **help desk tasks** (password reset, unlock accounts)  
+- Collect and analyze **Windows Event Logs**
+
 
 
 
