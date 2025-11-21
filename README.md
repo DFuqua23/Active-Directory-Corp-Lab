@@ -82,10 +82,11 @@ Simulate a corporate environment where a server manages AD user accounts and a W
 ---
 
 ## 🌱 AD Exploration 
-- Add **GPOs** (password policies, desktop restrictions)  
-- Configure **file shares** with security group permissions  
+- Create Organizational Units (OUs)  
+- Edit Group Policy (GPOs) 
 - Simulate common **help desk tasks** (password reset, unlock accounts)  
 - Collect and analyze **Windows Event Logs**
+
 
 
 
