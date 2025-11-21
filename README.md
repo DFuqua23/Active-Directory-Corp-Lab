@@ -86,15 +86,15 @@ Simulate a corporate environment where a server manages AD user accounts and a W
 3. **Windows 10 system properties** showing domain join  
 4. **Logon screen** using a domain user account  
 
-*(images)*
 
 ---
 
-## 🌱 Future Enhancements
+## 🌱 Further AD Exploration
 - Add **GPOs** (password policies, desktop restrictions)  
 - Configure **file shares** with security group permissions  
 - Simulate common **help desk tasks** (password reset, unlock accounts)  
 - Collect and analyze **Windows Event Logs**
+
 
 
 
