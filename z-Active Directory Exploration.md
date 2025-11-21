@@ -10,15 +10,15 @@ Structured the directory by departments to organize users and computers efficien
 
 ---
 
-## 2. Bulk User Management
-Used PowerShell to add multiple users at once, mirroring real-world onboarding in a corporate environment.  
-![Bulk Users Screenshot](../images/bulk-users.png)
+## 2. 
 
 ---
 
 ## 3. Password Resets
 Reset passwords for user accounts to simulate common help desk tasks and ensure users can access their accounts.  
-![Password Reset Screenshot](../images/password-reset.png)
+<img width="1000" height="700" alt="Reset Psssword 1" src="https://github.com/user-attachments/assets/208d7878-c818-4acf-ad49-809cc255257e" />
+<img width="1000" height="700" alt="Reset Password 2" src="https://github.com/user-attachments/assets/23602b81-b2e9-4aba-a714-a156cd0ae2d7" />
+
 
 ---
 
