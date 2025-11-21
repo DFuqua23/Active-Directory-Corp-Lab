@@ -1,3 +1,4 @@
+### This repo provides a more in depth breakdown of the scrip and how it works
 
 ## 1️⃣ Configuration Variables
 
