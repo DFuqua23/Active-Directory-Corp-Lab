@@ -5,12 +5,14 @@ This document highlights additional Active Directory tasks performed in my lab e
 ---
 
 ## 1. Creating Organizational Units (OUs)
-Structured the directory by departments to organize users and computers efficiently.  
+Structured the directory by departments to organize users and computers efficiently the added user to the groups.  
 ![OU Screenshot](../images/ous.png)
 
 ---
 
-## 2. 
+## 2. Edit GPOs 
+Edited the default account lockout policy to three failed attempts
+<img width="1000" height="700" alt="image" src="https://github.com/user-attachments/assets/7fab5b5c-aeb6-46f0-a3e5-12499ae9463e" />
 
 ---
 
@@ -23,14 +25,11 @@ Reset passwords for user accounts to simulate common help desk tasks and ensure 
 ---
 
 ## 4. Unlocking Locked Accounts
-Identified and unlocked accounts that were locked due to failed login attempts, practicing typical end-user support procedures.  
-![Unlock Account Screenshot](../images/unlock-account.png)
+Purposely failed a login attempt on a client account. Went into account settings on domian controler and unlocked the user account.
+<img width="1000" height="700" alt="Lockout 1" src="https://github.com/user-attachments/assets/dd279367-5576-4a3c-ad12-387e591bbb51" />
+<img width="1000" height="700" alt="Lockout 2" src="https://github.com/user-attachments/assets/64059574-822b-4746-bdf1-3a8f7ca58a08" />
 
----
 
-## 5. Adding Users to Groups
-Added users to security groups to assign permissions and access rights, demonstrating role-based access management.  
-![Group Membership Screenshot](../images/group-membership.png)
 
 ---
 
