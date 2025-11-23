@@ -57,7 +57,7 @@ $count++ increments the loop counter.
 
 ---
 
-This is a picture of the generatd users in the adictive directory users and computers section, under the users folds
+This is a picture of the generatd users in the adictive directory users and computers section, under the users folder
 
 <img width="1922" height="1198" alt="Screenshot 2025-11-20 141714" src="https://github.com/user-attachments/assets/0f012f55-d3d0-45c7-96b6-ee7275ad8083" />
 
