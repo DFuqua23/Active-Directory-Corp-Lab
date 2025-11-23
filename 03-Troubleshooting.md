@@ -1,10 +1,5 @@
 
 ## 🛠️ Troubleshooting
 
-This section highlights additional troubleshooting tasks I performed in the Active Directory lab environment.
-
--DNS NETWORK CONNECTIVITY
-- FAILED LOGIN IN EVENT VIEWER
-- CONNECTIVITY TO THE DC
-- 
+This guide documents practical troubleshooting steps to use in setting up this home Active Directory lab:
 
