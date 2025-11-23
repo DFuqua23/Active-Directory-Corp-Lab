@@ -61,7 +61,7 @@ Simulate a corporate environment where a server manages AD user accounts and a W
 - Ran a PowerShell script to create ~1,000 users.
 - Users created in a dedicated **Organizational Unit (OU)**.
 - Verified users in **Active Directory Users and Computers (ADUC)**.
-> Script available in `scripts/01-bulk-user-script.ps1` --> <a href="https://github.com/DFuqua23/Active-Directory-Corp-Lab/blob/main/scripts/01-bulk-user-script.ps1">Bulk User Script</a>
+> Script available in `scripts/01-bulk-user-script.ps1` --> <a href="https://github.com/DFuqua23/Active-Directory-Corp-Lab/blob/main/02-Active%20Directory%20Exploration.md">Bulk User Script</a>
 
 
 ### 3️⃣ Set Up the Windows 10 Client
@@ -86,6 +86,7 @@ Simulate a corporate environment where a server manages AD user accounts and a W
 - Edit Group Policy (GPOs) 
 - Simulate common **help desk tasks**
   - Password reset, unlocking disabled accounts
+
 
 
 
