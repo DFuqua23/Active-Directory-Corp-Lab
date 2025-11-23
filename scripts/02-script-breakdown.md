@@ -44,7 +44,7 @@ New-ADUser creates the actual AD user with:
 
 -DisplayName / -Name / -EmployeeID → username
 
--PasswordNeverExpires $true → lab-friendly password policy
+-PasswordNeverExpires $true → lab friendly password policy
 
 -Path → places the user in the _EMPLOYEES OU
 
