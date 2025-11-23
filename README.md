@@ -83,11 +83,12 @@ Simulate a corporate environment where a server manages AD user accounts and a W
 
 ## 🌱 AD Exploration 
 
-<a href="https://github.com/DFuqua23/Active-Directory-Corp-Lab/blob/main/scripts/01-bulk-user-script.ps1">AD Exploration Repo</a>
+<a href="https://github.com/DFuqua23/Active-Directory-Corp-Lab/blob/main/scripts/01-bulk-user-script.ps1">AD Exploration Page</a>
 - Create Organizational Units (OUs)  
 - Edit Group Policy (GPOs) 
 - Simulate common **help desk tasks**
   - Password reset, unlocking disabled accounts
+
 
 
 
