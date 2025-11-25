@@ -15,7 +15,7 @@ This repo is meant to serve as a landing page with a quick overview for this pro
 
 3) Active Directory deep dive file:--> <a href="https://github.com/DFuqua23/Active-Directory-Corp-Lab/blob/main/scripts/01-bulk-user-script.ps1">02-Active Directory Exploration.md</a>
 
-This is where i documented some more active direstory activities that were not part of the original lab set up.
+This is where I documented some more active direstory activities that were not part of the original lab set up.
 
 Skimming this page will give you the big picture. If you want to see more technical depth, the scripts and exploration file show how I actually worked through things.
 
@@ -107,6 +107,7 @@ This gives me a small “company” environment to practice user management, log
 - Edit Group Policy (GPOs) 
 - Simulate common **help desk tasks**
   - Password reset, unlocking disabled accounts
+
 
 
 
