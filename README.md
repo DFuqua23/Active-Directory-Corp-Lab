@@ -1,4 +1,4 @@
-# 🖥️ Active Directory Home Lab – Windows Server 2019 + Windows 10
+# Active Directory Home Lab – Windows Server 2019 + Windows 10
 
 This lab simulates a small company environment using **Active Directory Domain Services (AD DS)** on **Windows Server 2019** with a **Windows 10** client joined to the domain.  
 
@@ -17,7 +17,7 @@ This lab simulates a small company environment using **Active Directory Domain S
 
 ---
 
-## 🏗️ Lab Overview
+## Lab Overview
 
 | Component        | Details |
 |-----------------|---------|
@@ -32,7 +32,7 @@ Simulate a corporate environment where a server manages AD user accounts and a W
 
 ---
 
-## 🖥️ Lab Architecture
+## Lab Architecture
 
 **VirtualBox Host:**
 
@@ -50,21 +50,21 @@ Simulate a corporate environment where a server manages AD user accounts and a W
 
 ## ⚙️ Steps Performed
 
-### 1️⃣ Set Up the Domain Controller (Windows Server 2019)
+### Set Up the Domain Controller (Windows Server 2019)
 1. Created a new VM in **VirtualBox** and installed **Windows Server 2019**.
 2. Configured a **static IP**.
 3. Renamed server to `DC01` and rebooted.
 4. Installed **AD DS** + **DNS Server** roles.
 5. Promoted the server to **domain controller**, creating a new forest (e.g., `example.local`).
 
-### 2️⃣ Bulk Create Active Directory Users
+### Bulk Create Active Directory Users
 - Ran a PowerShell script to create ~1,000 users.
 - Users created in a dedicated **Organizational Unit (OU)**.
 - Verified users in **Active Directory Users and Computers (ADUC)**.
 > Script available in `scripts/01-bulk-user-script.ps1` --> <a href="https://github.com/DFuqua23/Active-Directory-Corp-Lab/blob/main/02-Active%20Directory%20Exploration.md">Bulk User Script</a>
 
 
-### 3️⃣ Set Up the Windows 10 Client
+### Set Up the Windows 10 Client
 1. Created a Windows 10 VM.
 2. Set **DNS server** to the domain controller’s IP.
 3. Joined VM to the domain `example.local`.
@@ -72,7 +72,7 @@ Simulate a corporate environment where a server manages AD user accounts and a W
 
 ---
 
-## 🛠️ Skills Demonstrated
+## Skills Demonstrated
 - Active Directory setup & configuration
 - Domain controller promotion & DNS management
 - PowerShell automation for user creation
@@ -81,13 +81,14 @@ Simulate a corporate environment where a server manages AD user accounts and a W
 
 ---
 
-## 🌱 AD Exploration 
+## AD Exploration 
 
 <a href="https://github.com/DFuqua23/Active-Directory-Corp-Lab/blob/main/scripts/01-bulk-user-script.ps1">AD Exploration Page</a>
 - Create Organizational Units (OUs)  
 - Edit Group Policy (GPOs) 
 - Simulate common **help desk tasks**
   - Password reset, unlocking disabled accounts
+
 
 
 
