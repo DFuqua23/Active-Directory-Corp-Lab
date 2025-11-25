@@ -1,13 +1,19 @@
 # Active Directory Home Lab – Windows Server 2019 + Windows 10
 
-This lab simulates a small company environment using **Active Directory Domain Services (AD DS)** on **Windows Server 2019** with a **Windows 10** client joined to the domain.  
+This project is a small Active Directory lab I built at home to practice the kind of tasks you’d see in a typical help desk role. It uses Windows Server 2019 as a domain controller and a Windows 10 client joined to the domain.
+The idea was to recreate a basic corporate setup where users log into a domain, accounts are managed centrally, and I can break and fix things on purpose to practice basic troubleshooting, active directory fundamentals and use it the envirnmanet for future labs.
 
-**Goal:** Gain hands-on experience with:
+**How to Navigate This Repo**
 
-- Installing and configuring a **domain controller**
-- Managing **user accounts** in Active Directory
-- Joining a **Windows 10** machine to a domain
-- Testing domain logons for multiple users
+This repo is meant to be a quick overview and starting point for this project
+
+README: High-level summary of the lab and how it relates to a help desk role.
+/scripts folder: Contains the PowerShell script I used to bulk-create ~1,000 Active Directory users.
+Active Directory deep dive file:
+For more detail on OUs, Group Policy, and help desk-style scenarios, see:
+--> 02-Active Directory Exploration.md
+
+If you’re a recruiter or hiring manager, skimming this page will give you the big picture. If you want to see more technical depth, the scripts and exploration file show how I actually worked through things.
 
 ![Windows Server](https://img.shields.io/badge/OS-Windows%20Server-blue)
 ![Windows 10](https://img.shields.io/badge/OS-Windows%2010-brightgreen)
@@ -15,7 +21,6 @@ This lab simulates a small company environment using **Active Directory Domain S
 ![PowerShell](https://img.shields.io/badge/Automation-PowerShell-blueviolet)
 ![Active Directory](https://img.shields.io/badge/Technology-Active%20Directory-blue)
 
----
 
 ## Lab Overview
 
@@ -34,17 +39,27 @@ Simulate a corporate environment where a server manages AD user accounts and a W
 
 ## Lab Architecture
 
-**VirtualBox Host:**
+**What I Built:**
 
-1. **VM 1 – DC01 (Windows Server 2019)**
-   - Promoted to a **domain controller**
-   - Active Directory Domain Services (AD DS) + DNS installed
-   - PowerShell script creates 1,000 AD users  
+In VirtualBox, I set up two virtual machines:
 
-2. **VM 2 – CLIENT01 (Windows 10)**
-   - Configured DNS to point to the domain controller
-   - Joined to the domain
-   - Verified logins for multiple domain users
+DC01 – Windows Server 2019
+
+Promoted to a domain controller
+
+Installed Active Directory Domain Services (AD DS) and DNS
+
+Used a PowerShell script to create about 1,000 user accounts in a dedicated OU
+
+CLIENT01 – Windows 10
+
+Pointed its DNS to the domain controller
+
+Joined it to the domain (e.g., example.local)
+
+Signed in with multiple domain user accounts to confirm everything was working
+
+This gives me a small “company” environment to practice user management, logons, and troubleshooting.
 
 ---
 
@@ -88,6 +103,7 @@ Simulate a corporate environment where a server manages AD user accounts and a W
 - Edit Group Policy (GPOs) 
 - Simulate common **help desk tasks**
   - Password reset, unlocking disabled accounts
+
 
 
 
