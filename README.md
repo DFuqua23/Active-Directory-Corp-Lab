@@ -7,18 +7,17 @@ The idea was to recreate a basic corporate setup where users log into a domain, 
 
 This repo is meant to serve as a landing page with a quick overview for this project.
 
-README: High-level summary of the lab and how it relates to a help desk role.
+1) README: Summary of the lab
 
-/scripts folder:
+2) scripts folder:
 -<a href="https://github.com/DFuqua23/Active-Directory-Corp-Lab/blob/main/02-Active%20Directory%20Exploration.md">scripts/01-bulk-user-script.ps1</a>
 -<a href="https://github.com/DFuqua23/Active-Directory-Corp-Lab/blob/main/scripts/02-script-breakdown.md">02-script-breakdown.md</a
 
-Active Directory deep dive file:
-For more detail on OUs, Group Policy, and help desk-style scenarios, see:
+3) Active Directory deep dive file:--> <a href="https://github.com/DFuqua23/Active-Directory-Corp-Lab/blob/main/scripts/01-bulk-user-script.ps1">02-Active Directory Exploration.md</a>
 
---> <a href="https://github.com/DFuqua23/Active-Directory-Corp-Lab/blob/main/scripts/01-bulk-user-script.ps1">02-Active Directory Exploration.md</a>
+This is where i documented some more active direstory activities that were not part of the original lab set up.
 
-If you’re a recruiter or hiring manager, skimming this page will give you the big picture. If you want to see more technical depth, the scripts and exploration file show how I actually worked through things.
+Skimming this page will give you the big picture. If you want to see more technical depth, the scripts and exploration file show how I actually worked through things.
 
 ![Windows Server](https://img.shields.io/badge/OS-Windows%20Server-blue)
 ![Windows 10](https://img.shields.io/badge/OS-Windows%2010-brightgreen)
@@ -108,6 +107,7 @@ This gives me a small “company” environment to practice user management, log
 - Edit Group Policy (GPOs) 
 - Simulate common **help desk tasks**
   - Password reset, unlocking disabled accounts
+
 
 
 
