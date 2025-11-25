@@ -1,21 +1,20 @@
 # Active Directory Home Lab – Windows Server 2019 + Windows 10
 
 This project is a small Active Directory lab I built at home to practice the kind of tasks you’d see in a typical help desk role. It uses Windows Server 2019 as a domain controller and a Windows 10 client joined to the domain.
-The idea was to recreate a basic corporate setup where users log into a domain, accounts are managed centrally, and I can break and fix things on purpose to practice basic troubleshooting, active directory fundamentals and use it the envirnmanet for future labs.
+The idea was to recreate a basic corporate setup where users log into a domain, accounts are managed centrally, and I can break and fix things on purpose to practice basic troubleshooting, active directory fundamentals and use the envirnmanet for future labs.
 
 **How to Navigate This Repo**
 
 This repo is meant to serve as a landing page with a quick overview for this project.
 
-1) README: Summary of the lab
+1) README (This Page): Summary of the lab
 
 2) scripts folder:
 -<a href="https://github.com/DFuqua23/Active-Directory-Corp-Lab/blob/main/02-Active%20Directory%20Exploration.md">scripts/01-bulk-user-script.ps1</a>
 -<a href="https://github.com/DFuqua23/Active-Directory-Corp-Lab/blob/main/scripts/02-script-breakdown.md">02-script-breakdown.md</a
-
+   -
 3) Active Directory deep dive file:--> <a href="https://github.com/DFuqua23/Active-Directory-Corp-Lab/blob/main/scripts/01-bulk-user-script.ps1">02-Active Directory Exploration.md</a>
-
-This is where I documented some more active direstory activities that were not part of the original lab set up.
+-This is where I documented some more active directory activities that were not part of the original lab set up.
 
 Skimming this page will give you the big picture. If you want to see more technical depth, the scripts and exploration file show how I actually worked through things.
 
@@ -107,6 +106,7 @@ This gives me a small “company” environment to practice user management, log
 - Edit Group Policy (GPOs) 
 - Simulate common **help desk tasks**
   - Password reset, unlocking disabled accounts
+
 
 
 
