@@ -5,13 +5,18 @@ The idea was to recreate a basic corporate setup where users log into a domain, 
 
 **How to Navigate This Repo**
 
-This repo is meant to be a quick overview and starting point for this project
+This repo is meant to serve as a landing page with a quick overview for this project.
 
 README: High-level summary of the lab and how it relates to a help desk role.
-/scripts folder: Contains the PowerShell script I used to bulk-create ~1,000 Active Directory users.
+
+/scripts folder:
+-<a href="https://github.com/DFuqua23/Active-Directory-Corp-Lab/blob/main/02-Active%20Directory%20Exploration.md">scripts/01-bulk-user-script.ps1</a>
+-<a href="https://github.com/DFuqua23/Active-Directory-Corp-Lab/blob/main/scripts/02-script-breakdown.md">02-script-breakdown.md</a
+
 Active Directory deep dive file:
 For more detail on OUs, Group Policy, and help desk-style scenarios, see:
---> 02-Active Directory Exploration.md
+
+--> <a href="https://github.com/DFuqua23/Active-Directory-Corp-Lab/blob/main/scripts/01-bulk-user-script.ps1">02-Active Directory Exploration.md</a>
 
 If you’re a recruiter or hiring manager, skimming this page will give you the big picture. If you want to see more technical depth, the scripts and exploration file show how I actually worked through things.
 
@@ -103,6 +108,7 @@ This gives me a small “company” environment to practice user management, log
 - Edit Group Policy (GPOs) 
 - Simulate common **help desk tasks**
   - Password reset, unlocking disabled accounts
+
 
 
 
