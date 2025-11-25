@@ -48,7 +48,7 @@ Simulate a corporate environment where a server manages AD user accounts and a W
 
 ---
 
-## ⚙️ Steps Performed
+## Steps Performed
 
 ### Set Up the Domain Controller (Windows Server 2019)
 1. Created a new VM in **VirtualBox** and installed **Windows Server 2019**.
@@ -88,6 +88,7 @@ Simulate a corporate environment where a server manages AD user accounts and a W
 - Edit Group Policy (GPOs) 
 - Simulate common **help desk tasks**
   - Password reset, unlocking disabled accounts
+
 
 
 
