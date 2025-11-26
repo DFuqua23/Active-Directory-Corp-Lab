@@ -1,7 +1,7 @@
 # Active Directory Home Lab – Windows Server 2019 + Windows 10
 
-This project is a small Active Directory lab I built at home to practice the kind of tasks you’d see in a typical help desk role. It uses Windows Server 2019 as a domain controller and a Windows 10 client joined to the domain.
-The idea was to recreate a basic corporate setup where users log into a domain, accounts are managed centrally, and I can break and fix things on purpose to practice basic troubleshooting, active directory fundamentals and use the environment for future labs.
+This project is a small Active Directory lab I built at home to gain hands-on experience with fundamental IT infrastructure skills, including installing and configuring virtual machines, a domain controller, managing user accounts, joining a client to a domain, and testing domain logons for multiple users. It uses Windows Server 2019 as a domain controller and a Windows 10 client joined to the domain. 
+Ultimately, the goal was to simulate a small-to-medium corporate network environment where users log into a domain, accounts are managed centrally, and I can break and fix things on purpose to practice basic troubleshooting, active directory fundamentals and use the environment for future labs.
 
 ![Windows Server](https://img.shields.io/badge/OS-Windows%20Server-blue)
 ![Windows 10](https://img.shields.io/badge/OS-Windows%2010-brightgreen)
@@ -87,7 +87,8 @@ This gives me a small “company” environment to practice user management, log
 ## AD Exploration 
 
 ## 1. Creating Organizational Units (OUs)
-Created groups in AD to simulate company deparments and added the 1000 users across the group
+I created groups in active directory to simulate company deparments and added the 1000 users across the groups according to the amounts specified below. This would help with better organization and i could later make role based access controls and security policies.
+
 (Sales: 300, Support: 250, Operations: 150, IT: 100, Finance: 100, HR: 50, Management: 50)
 
 <img width="1152" height="533" alt="Groups" src="https://github.com/user-attachments/assets/6ebd5f02-2523-4104-bda7-fb2f91da4c63" />
@@ -112,6 +113,7 @@ Reset passwords for user accounts to simulate common help desk tasks and ensure 
 Purposely failed multiple login attempts to lockout/disable a client account. Went into AD settings and unlocked the user account.
 <img width="1000" height="700" alt="Lockout 1" src="https://github.com/user-attachments/assets/dd279367-5576-4a3c-ad12-387e591bbb51" />
 <img width="1000" height="700" alt="Lockout 2" src="https://github.com/user-attachments/assets/64059574-822b-4746-bdf1-3a8f7ca58a08" />
+
 
 
 
