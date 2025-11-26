@@ -1,7 +1,7 @@
 # Active Directory Home Lab – Windows Server 2019 + Windows 10
 
 This project is a small Active Directory lab I built at home to practice the kind of tasks you’d see in a typical help desk role. It uses Windows Server 2019 as a domain controller and a Windows 10 client joined to the domain.
-The idea was to recreate a basic corporate setup where users log into a domain, accounts are managed centrally, and I can break and fix things on purpose to practice basic troubleshooting, active directory fundamentals and use the envirnmanet for future labs.
+The idea was to recreate a basic corporate setup where users log into a domain, accounts are managed centrally, and I can break and fix things on purpose to practice basic troubleshooting, active directory fundamentals and use the environment for future labs.
 
 **How to Navigate This Repo**
 
@@ -106,6 +106,7 @@ This gives me a small “company” environment to practice user management, log
 - Edit Group Policy (GPOs) 
 - Simulate common **help desk tasks**
   - Password reset, unlocking disabled accounts
+
 
 
 
