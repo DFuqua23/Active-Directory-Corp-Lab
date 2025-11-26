@@ -3,21 +3,6 @@
 This project is a small Active Directory lab I built at home to practice the kind of tasks you’d see in a typical help desk role. It uses Windows Server 2019 as a domain controller and a Windows 10 client joined to the domain.
 The idea was to recreate a basic corporate setup where users log into a domain, accounts are managed centrally, and I can break and fix things on purpose to practice basic troubleshooting, active directory fundamentals and use the environment for future labs.
 
-**How to Navigate This Repo**
-
-This repo is meant to serve as a landing page with a quick overview for this project.
-
-1) README (This Page): Summary of the lab
-
-2) scripts folder:
--<a href="https://github.com/DFuqua23/Active-Directory-Corp-Lab/blob/main/02-Active%20Directory%20Exploration.md">scripts/01-bulk-user-script.ps1</a>
--<a href="https://github.com/DFuqua23/Active-Directory-Corp-Lab/blob/main/scripts/02-script-breakdown.md">02-script-breakdown.md</a
-   -
-3) Active Directory deep dive file:--> <a href="https://github.com/DFuqua23/Active-Directory-Corp-Lab/blob/main/scripts/01-bulk-user-script.ps1">02-Active Directory Exploration.md</a>
--This is where I documented some more active directory activities that were not part of the original lab set up.
-
-Skimming this page will give you the big picture. If you want to see more technical depth, the scripts and exploration file show how I actually worked through things.
-
 ![Windows Server](https://img.shields.io/badge/OS-Windows%20Server-blue)
 ![Windows 10](https://img.shields.io/badge/OS-Windows%2010-brightgreen)
 ![VirtualBox](https://img.shields.io/badge/Hypervisor-VirtualBox-orange)
@@ -101,15 +86,32 @@ This gives me a small “company” environment to practice user management, log
 
 ## AD Exploration 
 
-<a href="https://github.com/DFuqua23/Active-Directory-Corp-Lab/blob/main/scripts/01-bulk-user-script.ps1">AD Exploration Page</a>
-- Create Organizational Units (OUs)  
-- Edit Group Policy (GPOs) 
-- Simulate common **help desk tasks**
-  - Password reset, unlocking disabled accounts
+## 1. Creating Organizational Units (OUs)
+Created groups in AD to simulate company deparments and added the 1000 users across the group
+(Sales: 300, Support: 250, Operations: 150, IT: 100, Finance: 100, HR: 50, Management: 50)
+
+<img width="1152" height="533" alt="Groups" src="https://github.com/user-attachments/assets/6ebd5f02-2523-4104-bda7-fb2f91da4c63" />
+
+---
+
+## 2. Edit GPOs 
+Edited the default account lockout policy to three failed attempts
+<img width="1000" height="700" alt="image" src="https://github.com/user-attachments/assets/7fab5b5c-aeb6-46f0-a3e5-12499ae9463e" />
+
+---
+
+## 3. Password Resets
+Reset passwords for user accounts to simulate common help desk tasks and ensure users can access their accounts.  
+<img width="1000" height="700" alt="Reset Psssword 1" src="https://github.com/user-attachments/assets/208d7878-c818-4acf-ad49-809cc255257e" />
+<img width="1000" height="700" alt="Reset Password 2" src="https://github.com/user-attachments/assets/23602b81-b2e9-4aba-a714-a156cd0ae2d7" />
 
 
+---
 
-
+## 4. Unlocking Locked Accounts
+Purposely failed multiple login attempts to lockout/disable a client account. Went into AD settings and unlocked the user account.
+<img width="1000" height="700" alt="Lockout 1" src="https://github.com/user-attachments/assets/dd279367-5576-4a3c-ad12-387e591bbb51" />
+<img width="1000" height="700" alt="Lockout 2" src="https://github.com/user-attachments/assets/64059574-822b-4746-bdf1-3a8f7ca58a08" />
 
 
 
