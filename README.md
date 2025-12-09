@@ -42,16 +42,16 @@ Signed in with multiple domain user accounts to confirm everything was working
 ## Steps Performed
 
 ### Set Up the Domain Controller (Windows Server 2019)
-1. Created a new VM in **VirtualBox** and installed **Windows Server 2019**.
-2. Configured a **static IP**.
-3. Renamed server to `DC01` and rebooted.
-4. Installed **AD DS** + **DNS Server** roles.
-5. Promoted the server to **domain controller**, creating a new forest (e.g., `example.local`).
+1. Create a new VM in **VirtualBox** and install **Windows Server 2019**.
+2. Configure a **static IP**.
+3. Rename server to `DC01` and reboot.
+4. Install **AD DS** + **DNS Server** roles.
+5. Promote the server to **domain controller**, create a new forest.
 
 ### Bulk Create Active Directory Users
-- Ran a PowerShell script to create ~1,000 users.
-- Users created in a dedicated **Organizational Unit (OU)**.
-- Verified users in **Active Directory Users and Computers (ADUC)**.
+- Ran a PowerShell script to create 1,000 simulated users.
+- Users are automatically created in a dedicated **Organizational Unit (OU)**.
+- Verifiy users in **Active Directory Users and Computers (ADUC)**.
 > Script available in `scripts/01-bulk-user-script.ps1` --> <a href="https://github.com/DFuqua23/Active-Directory-Corp-Lab/blob/main/02-Active%20Directory%20Exploration.md">Bulk User Script</a>
 
 
@@ -62,7 +62,7 @@ Signed in with multiple domain user accounts to confirm everything was working
 4. Logged in using several AD accounts to confirm functionality.
 
 
-## Waht I Learned
+## What I Learned
 This Active Directory project provided hands-on experience that showed me AD’s foundational role within enterprise environments.
 I gained a deeper understanding of why Active Directory exists, seeing how it acts as the centralized system for identity, authentication, and policy enforcement across an organization. 
 
@@ -100,6 +100,7 @@ For lab purposes, the change to the lockout policy makes it easier for me to sim
 Purposely failed multiple login attempts to lockout/disable a client account on the client machine, then went into the active directory settings on the domain controller and unlocked the user accounts.
 <img width="1000" height="700" alt="Lockout 1" src="https://github.com/user-attachments/assets/dd279367-5576-4a3c-ad12-387e591bbb51" />
 <img width="1000" height="700" alt="Lockout 2" src="https://github.com/user-attachments/assets/64059574-822b-4746-bdf1-3a8f7ca58a08" />
+
 
 
 
