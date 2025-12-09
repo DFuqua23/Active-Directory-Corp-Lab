@@ -1,14 +1,14 @@
 ### This repo provides a more in depth breakdown of the scrip and how it works
 
-## 1️⃣ Configuration Variables
+## Configuration Variables
 
-This portion sets the “inputs” for the script:
-
-$PASSWORD_FOR_USERS defines the default password all new users will receive.
-
-$NUMBER_OF_ACCOUNTS_TO_CREATE tells the script how many users to create.
-
-By adjusting these values, you control the scale and basic password policy for the bulk user creation.
+At the top of the script, two values are set:
+$PASSWORD_FOR_USERS – the password that will be assigned to every new account
+$NUMBER_OF_ACCOUNTS_TO_CREATE – how many users the script should generate
+Changing these values lets you decide:
+-how many users get created
+-and what password they start with
+In other words, these lines control the size of the user group and the default login information for all accounts the script builds.
 
 
 <img width="1076" height="212" alt="Script Part1" src="https://github.com/user-attachments/assets/c555a279-9f5c-4399-87aa-fc2f580ce618" />
