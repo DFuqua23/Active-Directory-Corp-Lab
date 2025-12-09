@@ -93,7 +93,8 @@ I changed the default account lockout policy from unlimited to three failed atte
 
 ## 3. Password Resets
 For lab purposes, the change to the lockout policy makes it easier for me to simulate a failed logon attmept and locked user accounts.    
-<img width="1000" height="700" alt="Reset Psssword 1" src="https://github.com/user-attachments/assets/208d7878-c818-4acf-ad49-809cc255257e" />
+<img width="700" height="500" alt="Reset Psssword 1" src="https://github.com/user-attachments/assets/e83cd280-78cc-425a-a47e-a113bce85700" />
+" />
 <img width="1000" height="700" alt="Reset Password 2" src="https://github.com/user-attachments/assets/23602b81-b2e9-4aba-a714-a156cd0ae2d7" />
 
 
@@ -101,6 +102,7 @@ For lab purposes, the change to the lockout policy makes it easier for me to sim
 Purposely failed multiple login attempts to lockout/disable a client account on the client machine, then went into the active directory settings on the domain controller and unlocked the user accounts.
 <img width="1000" height="700" alt="Lockout 1" src="https://github.com/user-attachments/assets/dd279367-5576-4a3c-ad12-387e591bbb51" />
 <img width="1000" height="700" alt="Lockout 2" src="https://github.com/user-attachments/assets/64059574-822b-4746-bdf1-3a8f7ca58a08" />
+
 
 
 
