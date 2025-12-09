@@ -83,7 +83,8 @@ I created groups in active directory to simulate company deparments and added th
 
 (Sales: 300, Support: 250, Operations: 150, IT: 100, Finance: 100, HR: 50, Management: 50)
 
-<img width="1152" height="533" alt="Groups" src="https://github.com/user-attachments/assets/6ebd5f02-2523-4104-bda7-fb2f91da4c63" />
+<img width="700" height="500" alt="Groups" src="https://github.com/user-attachments/assets/416cdb35-a138-48a0-a3b5-00552d317c67" />
+
 
 
 ## 2. Edit GPOs 
@@ -94,14 +95,15 @@ I changed the default account lockout policy from unlimited to three failed atte
 ## 3. Password Resets
 For lab purposes, the change to the lockout policy makes it easier for me to simulate a failed logon attmept and locked user accounts.    
 <img width="700" height="500" alt="Reset Psssword 1" src="https://github.com/user-attachments/assets/e83cd280-78cc-425a-a47e-a113bce85700" />
-" />
-<img width="1000" height="700" alt="Reset Password 2" src="https://github.com/user-attachments/assets/23602b81-b2e9-4aba-a714-a156cd0ae2d7" />
+<img width="700" height="500" alt="Reset Password 2" src="https://github.com/user-attachments/assets/7313db53-ee2b-43c3-847d-c45e1a2351c0" />
+
 
 
 ## 4. Unlocking Locked Accounts
 Purposely failed multiple login attempts to lockout/disable a client account on the client machine, then went into the active directory settings on the domain controller and unlocked the user accounts.
 <img width="1000" height="700" alt="Lockout 1" src="https://github.com/user-attachments/assets/dd279367-5576-4a3c-ad12-387e591bbb51" />
 <img width="1000" height="700" alt="Lockout 2" src="https://github.com/user-attachments/assets/64059574-822b-4746-bdf1-3a8f7ca58a08" />
+
 
 
 
