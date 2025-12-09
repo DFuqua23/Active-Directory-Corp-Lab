@@ -62,15 +62,18 @@ Signed in with multiple domain user accounts to confirm everything was working
 4. Logged in using several AD accounts to confirm functionality.
 
 
-## Skills Demonstrated
-- Active Directory setup & configuration
-- Domain controller promotion & DNS management
-- PowerShell automation for user creation
-- Windows 10 domain joins
-- Troubleshooting login & connectivity issues
+## Waht I Learned
+This Active Directory project provided hands-on experience that showed me AD’s foundational role within enterprise environments.
+I gained a deeper understanding of why Active Directory exists, seeing how it acts as the centralized system for identity, authentication, and policy enforcement across an organization. A key focus was understanding organizational structure through Organizational Units (OUs). By creating OUs to represent different departments and distributing 1,000 simulated users across them, I learned how AD enables the logical grouping of people and systems. This structure is essential because it makes it easier to manage permissions, apply targeted policies, and efficiently organize an enterprise size user population.
+The project also provided practical experience enforcing security standards across the entire domain, demonstrating that AD is not just about managing user accounts. I learned how to use Group Policy Objects (GPOs) to enforce security settings.
+By editing a GPO to enforce a lower account lockout threshold to allow only three failed attempts, it showcased how organizations implement protection against brute-force attacks.
+This specific task also highlighted the crucial trade-off in IT security balancing robust security measures against potential impacts on user usability.
+Hands-On Account Administration and Workflow
+Instead of only reading about domain administration, I executed the full workflow involved in managing account lockouts, similar to a real IT department. Purposely locking out a user and then unlocking that account directly from the domain controller gave me a real understanding of how lockouts happen, where administrative controls are managed, and what the support or security workflow looks like. This process provided tangible, hands-on experience performing account administration.
+Overall, this project solidified the understanding that Active Directory serves as the core identity and access management system for Windows environments, demonstrating how organizational structure, security controls, and user management are all interconnected within a single platform.
 
 
-## AD Exploration 
+## AD Exploration/Screenshots
 
 ## 1. Creating Organizational Units (OUs)
 I created groups in active directory to simulate company deparments and added the 1000 users across the groups according to the amounts specified below. This would help with better organization and allow me to add role based access controls and security policies.
@@ -95,6 +98,7 @@ For lab purposes, the change to the lockout policy makes it easier for me to sim
 Purposely failed multiple login attempts to lockout/disable a client account on the client machine, then went into the active directory settings on the domain controller and unlocked the user accounts.
 <img width="1000" height="700" alt="Lockout 1" src="https://github.com/user-attachments/assets/dd279367-5576-4a3c-ad12-387e591bbb51" />
 <img width="1000" height="700" alt="Lockout 2" src="https://github.com/user-attachments/assets/64059574-822b-4746-bdf1-3a8f7ca58a08" />
+
 
 
 
