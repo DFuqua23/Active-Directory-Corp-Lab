@@ -59,7 +59,7 @@ The script begins by setting the default password for all new users and the tota
 ### Set Up the Windows 10 Client
 1. Create a Windows 10 VM.
 2. Set **DNS server** to the domain controller’s IP.
-3. Join VM to the domain `example.local`.
+3. Join VM to the domain.
 4. Log in using several AD accounts to confirm functionality.
 
 
@@ -103,6 +103,7 @@ For lab purposes, the change to the lockout policy makes it easier for me to sim
 Purposely failed multiple login attempts to lockout/disable a client account on the client machine, then went into the active directory settings on the domain controller and unlocked the user accounts.
 <img width="1000" height="700" alt="Lockout 1" src="https://github.com/user-attachments/assets/dd279367-5576-4a3c-ad12-387e591bbb51" />
 <img width="1000" height="700" alt="Lockout 2" src="https://github.com/user-attachments/assets/64059574-822b-4746-bdf1-3a8f7ca58a08" />
+
 
 
 
