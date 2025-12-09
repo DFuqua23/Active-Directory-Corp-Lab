@@ -1,7 +1,7 @@
 # Active Directory Home Lab – Windows Server 2019 + Windows 10
 
 This project is a small Active Directory lab I built at home to gain hands-on experience with fundamental IT infrastructure skills, including installing and configuring virtual machines, a domain controller, managing user accounts, joining a client to a domain, and testing domain logons for multiple users. It uses Windows Server 2019 as a domain controller and a Windows 10 client joined to the domain. 
-Ultimately, the goal was to simulate a small to medium corporate network environment where users log into a domain, accounts are managed centrally, and I can break and fix things on purpose to practice basic troubleshooting, active directory fundamentals and use the environment for future labs.
+Ultimately, the goal was to simulate a small to medium corporate network environment where users log into a domain, accounts are managed centrally, and I can break and fix things on purpose to practice basic troubleshooting and active directory fundamentals.
 
 ![Windows Server](https://img.shields.io/badge/OS-Windows%20Server-blue)
 ![Windows 10](https://img.shields.io/badge/OS-Windows%2010-brightgreen)
@@ -12,13 +12,13 @@ Ultimately, the goal was to simulate a small to medium corporate network environ
 
 ## Lab Overview
 
-| Component        | Details |
+| Component        | Role / Purpose |
 |-----------------|---------|
-| Hypervisor       | Oracle VirtualBox | 
-| Server OS        | Windows Server 2019 (Domain Controller) | 
-| Client OS        | Windows 10 |
-| Directory Service| Active Directory Domain Services (AD DS) |
-| Automation       | PowerShell script to bulk-create 1,000 users |
+| Oracle VirtualBox     | Hypervisor / virtualization platform | 
+| Windows Server 2019   | Domain Controller (AD DS + DNS) | 
+| Windows 10        | Client OS / domain joined user workstation |
+| Active Directory Domain Services (AD DS)| Identity & domain infrastructure  |
+| Organizational Units (OUs) & Groups | Simulate department based user organization |
 
 **Objective:**  
 Simulate a corporate environment where a server manages AD user accounts and a Windows 10 client allows logins from any of the 1,000 users.
@@ -102,6 +102,7 @@ For lab purposes, the change to the lockout policy makes it easier for me to sim
 Purposely failed multiple login attempts to lockout/disable a client account on the client machine, then went into the active directory settings on the domain controller and unlocked the user accounts.
 <img width="1000" height="700" alt="Lockout 1" src="https://github.com/user-attachments/assets/dd279367-5576-4a3c-ad12-387e591bbb51" />
 <img width="1000" height="700" alt="Lockout 2" src="https://github.com/user-attachments/assets/64059574-822b-4746-bdf1-3a8f7ca58a08" />
+
 
 
 
