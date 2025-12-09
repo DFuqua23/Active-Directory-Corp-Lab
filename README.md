@@ -23,6 +23,8 @@ Ultimately, the goal was to simulate a small to medium corporate network environ
 
 ## Lab Architecture
 
+<img width="600" height="450" alt="image" src="https://github.com/user-attachments/assets/df163f8e-25e0-4345-8037-47fcc88876a8" />
+
 **What I Built:**
 
 In VirtualBox, I set up two virtual machines:
@@ -34,10 +36,8 @@ Used a PowerShell script to create about 1,000 user accounts in a dedicated OU
 
 CLIENT01 – Windows 10
 Pointed its DNS to the domain controller
-Joined it to the domain (e.g., example.local)
+Joined it to the domain
 Signed in with multiple domain user accounts to confirm everything was working
-This gives me a small “company” environment to practice user management, logons, and troubleshooting.
-
 
 ## Steps Performed
 
@@ -95,6 +95,7 @@ For lab purposes, the change to the lockout policy makes it easier for me to sim
 Purposely failed multiple login attempts to lockout/disable a client account on the client machine, then went into the active directory settings on the domain controller and unlocked the user accounts.
 <img width="1000" height="700" alt="Lockout 1" src="https://github.com/user-attachments/assets/dd279367-5576-4a3c-ad12-387e591bbb51" />
 <img width="1000" height="700" alt="Lockout 2" src="https://github.com/user-attachments/assets/64059574-822b-4746-bdf1-3a8f7ca58a08" />
+
 
 
 
