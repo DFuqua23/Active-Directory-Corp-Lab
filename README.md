@@ -88,7 +88,8 @@ I created groups in active directory to simulate company deparments and added th
 
 ## 2. Edit GPOs 
 I changed the default account lockout policy from unlimited to three failed attempts. This policy helps protect user accounts and the overall network from unauthorized access. With unlimited attempts, an attacker can keep guessing passwords over and over until they eventually get in. By locking an account after three failed login attempts, you greatly reduce the chances of a successful brute-force attack and make it much harder for someone to compromise an account. This also encourages users to be more careful when entering their passwords and can help IT teams quickly spot suspicious activity in event logs when multiple lockouts occur. 
-<img width="1000" height="700" alt="image" src="https://github.com/user-attachments/assets/7fab5b5c-aeb6-46f0-a3e5-12499ae9463e" />
+<img width="1000" height="600" alt="GPO Edits edit" src="https://github.com/user-attachments/assets/83e83aab-f3b1-40db-b17f-98f4c1d32a08" />
+
 
 
 ## 3. Password Resets
@@ -103,6 +104,7 @@ For lab purposes, the change to the lockout policy makes it easier for me to sim
 I purposely failed multiple login attempts to lockout/disable a client account on the client machine, then went into the active directory settings on the domain controller and unlocked the user account.
 <img width="1000" height="700" alt="Lockout 1" src="https://github.com/user-attachments/assets/dd279367-5576-4a3c-ad12-387e591bbb51" />
 <img width="1000" height="700" alt="Lockout 2" src="https://github.com/user-attachments/assets/64059574-822b-4746-bdf1-3a8f7ca58a08" />
+
 
 
 
