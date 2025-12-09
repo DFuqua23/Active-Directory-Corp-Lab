@@ -49,8 +49,7 @@ Signed in with multiple domain user accounts to confirm everything was working
 5. Promote the server to **domain controller**, create a new forest.
 
 ### Bulk Create Active Directory Users
-- Ran a PowerShell script to create 1,000 simulated users.
-- Users are automatically created in a dedicated **Organizational Unit (OU)**.
+- Run a PowerShell script to create 1,000 simulated users.
 - Verifiy users in **Active Directory Users and Computers (ADUC)**.
 
 The script begins by setting the default password for all new users and the total number of accounts to create. It then generates random first and last names, combines them into usernames, converts the password into a secure string, and uses New-ADUser to create each account in the Employees OU. Accounts are enabled and configured so the password does not expire, and the loop continues until all users are created.
@@ -102,6 +101,7 @@ For lab purposes, the change to the lockout policy makes it easier for me to sim
 Purposely failed multiple login attempts to lockout/disable a client account on the client machine, then went into the active directory settings on the domain controller and unlocked the user accounts.
 <img width="1000" height="700" alt="Lockout 1" src="https://github.com/user-attachments/assets/dd279367-5576-4a3c-ad12-387e591bbb51" />
 <img width="1000" height="700" alt="Lockout 2" src="https://github.com/user-attachments/assets/64059574-822b-4746-bdf1-3a8f7ca58a08" />
+
 
 
 
