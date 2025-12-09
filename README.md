@@ -20,10 +20,6 @@ Ultimately, the goal was to simulate a small to medium corporate network environ
 | Active Directory Domain Services (AD DS)| Identity & domain infrastructure  |
 | Organizational Units (OUs) & Groups | Simulate department based user organization |
 
-**Objective:**  
-Simulate a corporate environment where a server manages AD user accounts and a Windows 10 client allows logins from any of the 1,000 users.
-
----
 
 ## Lab Architecture
 
@@ -42,7 +38,6 @@ Joined it to the domain (e.g., example.local)
 Signed in with multiple domain user accounts to confirm everything was working
 This gives me a small “company” environment to practice user management, logons, and troubleshooting.
 
----
 
 ## Steps Performed
 
@@ -66,7 +61,6 @@ This gives me a small “company” environment to practice user management, log
 3. Joined VM to the domain `example.local`.
 4. Logged in using several AD accounts to confirm functionality.
 
----
 
 ## Skills Demonstrated
 - Active Directory setup & configuration
@@ -75,7 +69,6 @@ This gives me a small “company” environment to practice user management, log
 - Windows 10 domain joins
 - Troubleshooting login & connectivity issues
 
----
 
 ## AD Exploration 
 
@@ -102,6 +95,7 @@ For lab purposes, the change to the lockout policy makes it easier for me to sim
 Purposely failed multiple login attempts to lockout/disable a client account on the client machine, then went into the active directory settings on the domain controller and unlocked the user accounts.
 <img width="1000" height="700" alt="Lockout 1" src="https://github.com/user-attachments/assets/dd279367-5576-4a3c-ad12-387e591bbb51" />
 <img width="1000" height="700" alt="Lockout 2" src="https://github.com/user-attachments/assets/64059574-822b-4746-bdf1-3a8f7ca58a08" />
+
 
 
 
